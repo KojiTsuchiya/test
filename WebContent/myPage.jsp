@@ -13,7 +13,6 @@
   <title>MyPage画面</title>
 
   <style type="text/css">
-
   body{
   margin:0;
   padding:0;
@@ -64,14 +63,14 @@
 
   #main-cont{
   width:95%;
-  height:800px;
+  height:600px;
   margin:0 auto;
-  margin-top:130px;
-  margin-bottom:200px;
+  margin-top:130px ;
   }
 
   #top{
-  height:250px;
+  height:200px;
+  line-height:200px;
   margin-top:20px;
   margin-bottom:30px;
   border-bottom:solid 5px black;
@@ -81,12 +80,12 @@
   letter-spacing:2px;
   }
 
-  #btn{
+  #top2{
   clear:both;
   margin-top:20px;
   }
 
-  #btn div{
+  #top2 div{
   text-align:center;
   font-size:20px;
   }
@@ -142,15 +141,14 @@
 </head>
 <body>
   <div id="header">
-    <div id="pr">
-    </div>
+    <div id="header-logo">Book Shopping</div>
   </div>
   <div id="main">
     <div id="main-cont">
     <div id="top">
-      <p>MyPage</p>
+      <h1>MyPage</h1>
     </div>
-    <div>
+    <div id="btn">
       <s:if test="session.message == ">
         <h3>ご購入情報は以下になります。</h3>
         <table>
@@ -185,18 +183,18 @@
       <s:if test="session.message!=null">
         <h3><s:property value="session.message"/></h3>
       </s:if>
-        <div>
-          <br>
-          <span>前画面に戻るには</span>
-          <a href='<s:url action="HomeAction"/>'>ログアウト</a>
-          <span>をお願いします</span>
-        </div>
     </div>
     </div>
   </div>
 
-  <div id="footer">
-    <div id="pr">
+  <div id="fotter">
+    <div id="fotter-menu">
+    <ul>
+      <li><a href='home.jsp'>ホーム</a></li>
+      <li>商品一覧</li>
+      <li>マイページ</li>
+      <li><a href='<s:url action="HomeAction"/>'>ログイン</a></li>
+    </ul>
     </div>
   </div>
 

@@ -13,51 +13,128 @@
   <title>buyItemComplete画面</title>
 
   <style type="text/css">
-  /*===TAG LAYOUT===*/
   body{
   margin:0;
-  paddin:0;
-  line-height:1.6;
+  padding:0;
+  width:100%;
+  line-height:1;
   letter-spacing:1px;
-  font-family:Verdana,Helvetica,sans-serif;
+  font-family:sans-serif;
   font-size:12px;
   color:#333;
   background:#fff;
   }
 
-  table{
-  text-align:center;
-  margin:0 auto;
-  }
-
-  /*===ID LAYOUT===*/
-  #top{
-  width:780px;
-  margin:30px auto;
-  border:1px solid #333;
-  }
-
   #header{
+  position:absolute;
+  top:0px;
+  left:0px;
   width:100%;
-  height:80px;
+  height:100px;
   background-color:black;
+  }
+
+  #header-logo{
+  float:left;
+  line-height:100px;
+  padding-left:40px;
+  font-family:'arial black';
+  font-size:60px;
+  color:white;
+  }
+
+  #header ul{
+  float:right;
+  line-height:80px;
+  }
+
+  #header ul li{
+  float:left;
+  list-style-type:none;
+  padding-right:50px;
+  font-family:'arial black';
+  font-size:20px;
+  color:white;
   }
 
   #main{
-  width:100%;
-  height:500px;
-  text-align:center;
-  }
-
-  #main h3{
-  margin:50px auto;
-  }
-
-  #footer{
-  width:100%;
-  height:80px;
-  background-color:black;
   clear:both;
+  }
+
+  #main-cont{
+  width:95%;
+  height:600px;
+  margin:0 auto;
+  margin-top:130px ;
+  }
+
+  #top{
+  height:200px;
+  line-height:200px;
+  margin-top:20px;
+  margin-bottom:30px;
+  border-bottom:solid 5px black;
+  text-align:center;
+  font-size:30px;
+  font-family:'arial black';
+  letter-spacing:2px;
+  }
+
+  #top2{
+  clear:both;
+  margin-top:20px;
+  }
+
+  #top2 div{
+  text-align:center;
+  font-size:20px;
+  }
+
+  a.bt-samp31{
+  margin:0 auto;
+  display: block;
+  text-decoration: none;
+  height:35px;
+  width: 120px;
+  line-height: 37px;
+  text-align: center;
+  color: black;
+  border:solid 1px black;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  border-radius:10px;
+  }
+
+  a.bt-samp31:hover{
+  background: #2bb6c1;
+  color: #fff;
+  }
+
+  #fotter{
+  position:fixed;
+  bottom:0px;
+  left:0xp;
+  width:100%;
+  height:100px;
+  background-color:black;
+  }
+
+  #fotter-menu li{
+  float:left;
+  padding-right:50px;
+  list-style:none;
+  line-height:80px;
+  font-family:'arial black';
+  font-size:20px;
+  color:white;
+  }
+
+  #fotter a{
+  color:white;
+  text-decoration: none;
   }
 
   </style>
@@ -65,24 +142,32 @@
 </head>
 <body>
   <div id="header">
-    <div id="pr">
-    </div>
+      <div id="header-logo">Book Shopping</div>
   </div>
   <div id="main">
+    <div id="main-cont">
     <div id="top">
-      <p>BuyItemComplete</p>
+      <h1>BuyItemComplete</h1>
     </div>
-    <div>
-      <p><h3>購入手続きが完了いたしました。</h3></div>
+    <div id="top2">
+      <div><h3>購入手続きが完了いたしました。</h3></div>
       <div>
         <a href='<s:url action="MyPageAction"/>'>
         マイページ</a><span>からの購入履歴の確認が可能です。</span>
       </div>
+      </div>
+      </div>
     </div>
 
-    <div id="footer">
-      <div id="pr">
-      </div>
+    <div id="fotter">
+    <div id="fotter-menu">
+    <ul>
+      <li><a href='home.jsp'>ホーム</a></li>
+      <li>商品一覧</li>
+      <li>マイページ</li>
+      <li><a href='<s:url action="HomeAction"/>'>ログイン</a></li>
+    </ul>
+    </div>
     </div>
 
 

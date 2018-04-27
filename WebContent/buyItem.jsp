@@ -81,6 +81,11 @@
   letter-spacing:2px;
   }
 
+  table{
+  text-align:center;
+  margin:0 auto;
+  }
+
   #Item{
   clear:both;
   margin-top:20px;
