@@ -13,47 +13,129 @@
   <title>MyPage画面</title>
 
   <style type="text/css">
-  /*===TAG LAYOUT===*/
+
   body{
   margin:0;
   padding:0;
-  line-height:1.6;
+  width:100%;
+  line-height:1;
   letter-spacing:1px;
-  font-family:Verdana,Helvetica,sans-serif;
-  font-siza:12px;
+  font-family:sans-serif;
+  font-size:12px;
   color:#333;
   background:#fff;
   }
 
-  table{
-  text-align:center;
-  margin:0 auto;
-  }
-
-  /*===ID LAYOUT===*/
-  #top{
-  width:780px;
-  margin:30px auto;
-  border:1px solid #333;
-  }
-
   #header{
+  position:absolute;
+  top:0px;
+  left:0px;
   width:100%;
-  height:80px;
+  height:100px;
   background-color:black;
+  }
+
+  #header-logo{
+  float:left;
+  line-height:100px;
+  padding-left:40px;
+  font-family:'arial black';
+  font-size:60px;
+  color:white;
+  }
+
+  #header ul{
+  float:right;
+  line-height:80px;
+  }
+
+  #header ul li{
+  float:left;
+  list-style-type:none;
+  padding-right:50px;
+  font-family:'arial black';
+  font-size:20px;
+  color:white;
   }
 
   #main{
-  width:100%;
-  height:500px;
-  text-align:center;
+  clear:both;
   }
 
-  #footer{
+  #main-cont{
+  width:95%;
+  height:800px;
+  margin:0 auto;
+  margin-top:130px;
+  margin-bottom:200px;
+  }
+
+  #top{
+  height:250px;
+  margin-top:20px;
+  margin-bottom:30px;
+  border-bottom:solid 5px black;
+  text-align:center;
+  font-size:30px;
+  font-family:'arial black';
+  letter-spacing:2px;
+  }
+
+  #btn{
+  clear:both;
+  margin-top:20px;
+  }
+
+  #btn div{
+  text-align:center;
+  font-size:20px;
+  }
+
+  a.bt-samp31{
+  margin:0 auto;
+  display: block;
+  text-decoration: none;
+  height:35px;
+  width: 120px;
+  line-height: 37px;
+  text-align: center;
+  color: black;
+  border:solid 1px black;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  border-radius:10px;
+  }
+
+  a.bt-samp31:hover{
+  background: #2bb6c1;
+  color: #fff;
+  }
+
+  #fotter{
+  position:fixed;
+  bottom:0px;
+  left:0xp;
   width:100%;
-  height:80px;
+  height:100px;
   background-color:black;
-  clear;both;
+  }
+
+  #fotter-menu li{
+  float:left;
+  padding-right:50px;
+  list-style:none;
+  line-height:80px;
+  font-family:'arial black';
+  font-size:20px;
+  color:white;
+  }
+
+  #fotter a{
+  color:white;
+  text-decoration: none;
   }
 
   </style>
@@ -64,6 +146,7 @@
     </div>
   </div>
   <div id="main">
+    <div id="main-cont">
     <div id="top">
       <p>MyPage</p>
     </div>
@@ -108,6 +191,7 @@
           <a href='<s:url action="HomeAction"/>'>ログアウト</a>
           <span>をお願いします</span>
         </div>
+    </div>
     </div>
   </div>
 

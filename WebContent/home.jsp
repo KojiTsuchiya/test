@@ -64,10 +64,10 @@
 
   #main-cont{
   width:95%;
-  height:600px;
+  height:800px;
   margin:0 auto;
-  margin-top:130px ;
-
+  margin-top:130px;
+  margin-bottom:200px;
   }
 
   #top{
@@ -126,7 +126,7 @@
   }
 
   #fotter{
-  position:absolute;
+  position:fixed;
   bottom:0px;
   left:0xp;
   width:100%;
@@ -134,17 +134,26 @@
   background-color:black;
   }
 
+  #fotter-menu li{
+  float:left;
+  padding-right:50px;
+  list-style:none;
+  line-height:80px;
+  font-family:'arial black';
+  font-size:20px;
+  color:white;
+  }
+
+  #fotter a{
+  color:white;
+  text-decoration: none;
+  }
+
   </style>
 
 <body>
   <div id="header">
     <div id="header-logo">Book Shopping</div>
-    <ul>
-      <li>新着商品</li>
-      <li>商品一覧</li>
-      <li>マイページ</li>
-      <li>お問い合わせ</li>
-    </ul>
   </div>
 
   <div id="main">
@@ -154,10 +163,10 @@
       <p>書籍の購入のためのサイトです。</p>
     </div>
     <div id="picture">
-      <img src="image/図書室1.jpg"/><img
-      src="image/洋書1.jpg"/><img
-      src="image/洋書2.jpg"/><img
-      src="image/洋書3.jpg"/>
+      <p id="pic1"><img src="image/図書室1.jpg"/><img
+      src="image/洋書1.jpg"/></p>
+      <p id="pic2"><img src="image/洋書2.jpg"/><img
+      src="image/洋書3.jpg"/></p>
     </div>
     <div id="btn">
       <div><h3>こちらからログインして、商品ページへ。</h3></div>
@@ -167,6 +176,14 @@
   </div>
 
   <div id="fotter">
+    <div id="fotter-menu">
+    <ul>
+      <li><a href='home.jsp'>ホーム</a></li>
+      <li>商品一覧</li>
+      <li>マイページ</li>
+      <li><a href='<s:url action="HomeAction"/>'>ログイン</a></li>
+    </ul>
+    </div>
   </div>
 
 </body>

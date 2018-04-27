@@ -14,7 +14,7 @@
 
   <style type="text/css">
 
-    body{
+  body{
   margin:0;
   padding:0;
   width:100%;
@@ -67,7 +67,6 @@
   height:600px;
   margin:0 auto;
   margin-top:130px ;
-
   }
 
   #top{
@@ -81,6 +80,7 @@
   font-family:'arial black';
   letter-spacing:2px;
   }
+
   #btn{
   clear:both;
   margin-top:20px;
@@ -91,7 +91,12 @@
   font-size:20px;
   }
 
-  a.bt-samp31{
+  .form-css{
+  margin:30px auto;
+  font-size:20px;
+  }
+
+  .bt-samp31{
   margin:0 auto;
   display: block;
   text-decoration: none;
@@ -107,15 +112,16 @@
   -ms-transition: 0.3s;
   transition: 0.3s;
   border-radius:10px;
+  background-color:white;
   }
 
-  a.bt-samp31:hover{
+  .bt-samp31:hover{
   background: #2bb6c1;
   color: #fff;
   }
 
   #fotter{
-  position:absolute;
+  position:fixed;
   bottom:0px;
   left:0xp;
   width:100%;
@@ -123,17 +129,27 @@
   background-color:black;
   }
 
+    #fotter-menu li{
+  float:left;
+  padding-right:50px;
+  list-style:none;
+  line-height:80px;
+  font-family:'arial black';
+  font-size:20px;
+  color:white;
+  }
+
+  #fotter-menu a{
+  color:white;
+  text-decoration: none;
+  }
+
+
   </style>
   </head>
   <body>
     <div id="header">
       <div id="header-logo">Book Shopping</div>
-    <ul>
-      <li>新着商品</li>
-      <li>商品一覧</li>
-      <li>マイページ</li>
-      <li>お問い合わせ</li>
-    </ul>
     </div>
 
     <div id="main">
@@ -143,25 +159,30 @@
       </div>
       <div id="btn">
         <div><h3>商品を購入する際にはログインをお願いします。</h3></div>
-        <div>
-          <s:form action="LoginAction">
-            <s:textfield name="loginUserId"/>
-            <s:password name="loginPassword"/>
-
-            <a href='<s:url action="LoginAction"/>' class="bt-samp31">ログイン</a>
+          <s:form cssClass="form-css" action="LoginAction">
+            <s:textfield label="ログインID" name="loginUserId"/>
+            <s:password label="パスワード" name="loginPassword"/>
+            <s:submit value="ログイン" class="bt-samp31"/>
           </s:form>
-          <br/>
-          <div>
+        <br/>
+        <div>
             <span>新規ユーザー登録は
               <a href='<s:url action="UserCreateAction"/>'>こちら</a>
             </span>
-          </div>
         </div>
         </div>
         </div>
       </div>
 
       <div id="fotter">
+            <div id="fotter-menu">
+    <ul>
+      <li><a href='home.jsp'>ホーム</a></li>
+      <li>商品一覧</li>
+      <li>マイページ</li>
+      <li><a href='<s:url action="HomeAction"/>'>ログイン</a></li>
+    </ul>
+    </div>
       </div>
 
   </body>
